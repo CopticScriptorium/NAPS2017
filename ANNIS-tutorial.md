@@ -1,13 +1,19 @@
 # ANNIS Tutorial
-## Introduction to ANNIS
+<a name="intro"></a>## Introduction to ANNIS
 Coptic Scriptorium uses the [ANNIS](http://corpus-tools.org/annis/) search and visualization tool. You can access Coptic Scriptorium's corpora in ANNIS in multiple ways:
 * Go directly to [https://corpling.uis.georgetown.edu/annis/scriptorium](https://corpling.uis.georgetown.edu/annis/scriptorium) and run a query
 * In the [Coptic online dictionary](https://corpling.uis.georgetown.edu/coptic-dictionary/), search for a word; click on the ANNIS icon to find instances of that lemma in ANNIS
 * When browsing documents at [our portal for reading Coptic texts](http://data.copticscriptorium.org), click on the "Search ANNIS" button to query that corpus.
 
-This tutorial will introduce you to the ways in which our corpora are annotated, how to search the corpora and annotations, and how to download and cite those queries.
+This tutorial will: 
+  * [introduce you to our documents and corpora in ANNIS](#corpus)
+  * [show you how to perform simple word searches](#search)
+  * [show you how to perform more complex searches for annotations and metadata](#complex)
+  * [demonstrate how to generate word frequency lists](#freq)
+  * [show you how to download search/query results](#download)
+  * [provide models for citing or linking to the data in your publications](#cite)
 
-## ANNIS Corpus Browser
+<a name="corpus"></a>## ANNIS Corpus Browser
 When you arrive at [https://corpling.uis.georgetown.edu/annis/scriptorium](https://corpling.uis.georgetown.edu/annis/scriptorium), you will see the list of publicly available corpora on the lower left of your screen.  (On the right, you will see a list of sample queries for our corpora -- more on that in a minute.)
 <a name="docinfo"></a>Look at the list of corpora:
 1.  To find out more information about any corpus, click the "i" information button for that corpus.  A window will appear with:
@@ -22,7 +28,7 @@ When you arrive at [https://corpling.uis.georgetown.edu/annis/scriptorium](https
   **:arrow_right:Try it:  What happens when you type in "shenoute." (without the quotation marks) in the Filter box above the list of corpora?**
   **:arrow_right:What happens when you click the :arrows_counterclockwise: button ?**
 
-## Basic Search
+<a name="search"></a>## Basic Search
 Let's start by using the example queries provided for any given corpus.
 
 **:arrow_right:Try it:  Click on the first corpus, apophthegmata.patrum.  Then play around with the sample queries or follow the following steps**
@@ -59,7 +65,7 @@ ANNIS uses a multi-layer annotation model, where a base text appears followed by
   
 **:arrow_right:Try it:  You can click on the History button to see all the previous queries you've run in your current ANNIS session.**
 
-## Complex Searches 
+<a name="complex"></a>## Complex Searches 
 
 You can also use [regular expressions](http://ryanstutorials.net/regular-expressions-tutorial/) and the Annis Query Language to create complex queries, searches for sequences of characters, queries for two or more annotations, etc.
 
@@ -139,9 +145,25 @@ You can also produce frequencies for more refined lists. **_Be sure to close the
 
 _Again:  know your corpus so you understand the numbers.  Spend some time looking at the metadata, understanding the annotation layers, and running queries to see how the annotations and textual data work._
 
-## Download Your Results
+<a name="download"></a>## Download Your Results
 
-## Cite and Link to Your Query
+We encourage all researcher to keep records of their research in ANNIS.  This includes queries, the corpora on which the queries are run , the version number and version date of the corpora, and the results.
+
+There are multiple ways you can download the results of your query by clicking More > Export underneath the query panel.  Each way or format works well for a different discipline or research objective.  For most people who work with texts as philologists, historians, or religious studies scholars, we recommend using the GridExporter.  The GridExporter allows you to tell ANNIS which annotations and which metadata you want to export.
+
+**:arrow_right:Try it: Run a query ([such as this one](https://corpling.uis.georgetown.edu/annis/?id=ad9787db-c777-465f-8c39-a8f1b661ebca) and download your results.**
+  * Run the query
+  * Click "More" > "Export"
+  * In the Exporter dropdown menu select GridExporter
+  * In the "annotation keys" box, type the annotations you want to export.  Try: orig, norm, translation, pb_xml_id to export the original manuscript text, normalized text, translation (if available), and the page number of the manuscript
+  * In the Parameters box type numbers=false;metakeys=title,version_n,version_date to export the document title, version number, and version date for EVERY hit in your search.
+  * Click Perform Export
+  * Click Download
+  * You can open this text file in any text editor (such as TextEdit, Text Wrangler, etc.)
+  * If you want more annotations (such as part of speech tags) add them to the "annotation keys" box; be sure to use the correct name for the annotation
+  * If you want more metadata (such as the names of editors or translators of each document), add them to the "Parameters" box; be sure to use the correct name for the metadata field
+
+<a name="cite"></a>## Cite and Link to Your Query
 
 
 
