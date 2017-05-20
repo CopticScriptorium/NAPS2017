@@ -9,12 +9,12 @@ This tutorial will introduce you to the ways in which our corpora are annotated,
 
 ## ANNIS Corpus Browser
 When you arrive at [https://corpling.uis.georgetown.edu/annis/scriptorium](https://corpling.uis.georgetown.edu/annis/scriptorium), you will see the list of publicly available corpora on the lower left of your screen.  (On the right, you will see a list of sample queries for our corpora -- more on that in a minute.)
-Look at the list of corpora:
+<a name="docinfo"></a>Look at the list of corpora:
 1.  To find out more information about any corpus, click the "i" information button for that corpus.  A window will appear with:
   * a dropdown menu at the top listing all the documents in a corpus
   * on the left, _metadata_ (information about the corpus, such as annotators, translators, the date this version of the corpus was released)
   * on the right, all the annotations available for texts in this corpus; for a description of what these annotations are, visit our [Annotation Layer Names documentation page](http://wiki.copticscriptorium.org/doku.php?id=annotation_layer_names); if you're in person at the NAPS workshop, we'll also give you a handout.
-2.  To see a list of documents in any corpus, click the document icon (it looks like a page) for that corpus name
+2.  To see a list of documents in any corpus, click the document icon :page_facing_up: for that corpus name
   * Click the "i" information button for any document for more information
   * You'll also see a list of visualizations for each document (the same visualizations available at [http://data.copticscriptorium.org](http://data.copticscriptorium.org)
   **:arrow_right:Try it:  What happens when you click on a link for a visualization?**
@@ -92,7 +92,7 @@ You can also add metadata to your queries.
 **:arrow_right:Try it: Select the Abraham Our Father corpus.  Search for all the appearances of "ϣⲉⲉⲣⲉ" in the codex MONB.YA:  norm="ϣⲉⲉⲣⲉ" & meta::msName="MONB.YA"**
   * Play around with other metadata fields.  To find all words in documents edited by Rebecca S. Krawiec, select your corpora and search: 
 ```  
-meta::annotation=/.*Krawiec.*/
+norm & meta::annotation=/.*Krawiec.*/
 ```
 
 There's lots of fun stuff you can do with regular expressions:
@@ -103,7 +103,42 @@ There's lots of fun stuff you can do with regular expressions:
 
 *Know your corpus and annotations when doing research.  For example, in our corpus, a compound word containing both Greek and Coptic contains a language tag only for the Greek morph within the compound. (E.g., in ⲣⲭⲣⲉⲓⲁ, only ⲭⲣⲉⲓⲁ receives the Greek tag. Hence, we use syntax for finding overlapping search fields ("o") rather than equivalent fields ("="). lang="Greek" _o_ pos="V" finds all Greek verbs.*
 
+## Word Frequencies
+ANNIS allows you to find word frequency lists for our corpora.
+
+**:arrow_right:Try it: Select the shenoute.eagerness corpus. **
+  * type in the following query to find all the words in the corpus:  norm
+  * Below the query window, you should see a button for "More."  Click on it and select "Frequency Analysis."  Click "Perform Frequency Analysis"
+  * Both a chart and a list of word frequencies will appear.
+  * You can see your frequencies on a [linear scale or a log scale](http://www.fool.com/foolfaq/foolfaqcharts.htm)
+
+**:arrow_right:Try it: Download your frequency list by clicking the "Download as CSV" button**
+
+You can also produce frequencies for more refined lists. **_Be sure to close the "Frequency Analysis" pane to clear your data before you start a new analysis._**
+
+**:arrow_right:Try it: Create lists for loan words in our corpus **
+  **Remember: If you have just run a frequency analysis, then close the current "Frequency Analysis" pane first.  Do this (or click "new analysis") between each new frequency analysis. **
+  1. Find the Greek loan words in the shenoute.eagerness corpus using this query: lang="Greek" _o_ norm
+    * Enter the query.  (If you've closed the Frequency Analysis pane, click "More" then "Frequency Analysis")
+    * Delete all rows EXCEPT "norm" (since you want the frequency of each normalized word)
+    * Click 
+  2. Can you do the same to find _all_ loan words in the shenoute.eagerness corpus (remember to hit "new analysis" first): lang=/.*/ _o_ norm
+  3. Can you do the same to find all loan words that are _verbs_ (remember to hit "new analysis" first): lang=/.*/ _o_ norm _o_ pos="V"
   
+**BONUS question:  What do you do about corpora that contain more than one manuscript witness to the same text?**  I See Your Eagerness is one such corpus.  In some places, we have parallel manuscript witnesses to the same text.  So if you run a straight word frequency list, you'll get duplicate "hits".  For this corpus (and future versions of other corpora) we encode parallel witnesses in the metadata fields.  When you [click on the "i" information button](#docinfo) for a document, you'll see metadata fields for "witness" and "redundant".
+
+TODO: insert image
+
+**:arrow_right:Try it: Run a freqency analysis using the following query: lang=/.*/ _o_ norm _o_ pos="V" & meta::redundant="no" **
+  * Remember to click "new analysis" to clear your old frequency data first!
+  * Remember to delete rows for everything except norm when you run the analysis.
+  * Are the results _different_ from the results from #3 above?
+
+_Again:  remember, know your corpus so you understand the numbers.  Spend some time looking at the metadata, understanding the annotation layers, and running queries to see how the annotations and textual data work._
+
+## Download Your Results
+
+## Cite and Link to Your Query
 
 
 
