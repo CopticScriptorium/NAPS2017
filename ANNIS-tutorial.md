@@ -130,7 +130,7 @@ You can also produce frequencies for more refined lists. **_Be sure to close the
   
 **BONUS question:  What do you do about corpora that contain more than one manuscript witness to the same text?**  I See Your Eagerness is one such corpus.  In some places, we have parallel manuscript witnesses to the same text.  So if you run a straight word frequency list, you'll get duplicate "hits".  For this corpus (and future versions of other corpora) we encode parallel witnesses in the metadata fields.  When you [click on the "i" information button](#docinfo) for a document, you'll see metadata fields for "witness" and "redundant".
 
-  ![Image of metadata-witness](https://https://github.com/CopticScriptorium/NAPS2017/images/metadata-witness.png)
+  ![Image of metadata-witness](https://github.com/CopticScriptorium/NAPS2017/raw/master/images/metadata-witness.png)
 
 **:arrow_right:Try it: Run a freqency analysis using the following query: `lang=/.*/ _o_ norm _o_ pos="V" & meta::redundant="no"`**
   * Remember to click "new analysis" to clear your old frequency data first!
