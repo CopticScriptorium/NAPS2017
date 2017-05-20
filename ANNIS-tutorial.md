@@ -1,5 +1,6 @@
 # ANNIS Tutorial
-<a name="intro"></a>## Introduction to ANNIS
+
+## <a name="intro"></a>Introduction to ANNIS
 Coptic Scriptorium uses the [ANNIS](http://corpus-tools.org/annis/) search and visualization tool. You can access Coptic Scriptorium's corpora in ANNIS in multiple ways:
 * Go directly to [https://corpling.uis.georgetown.edu/annis/scriptorium](https://corpling.uis.georgetown.edu/annis/scriptorium) and run a query
 * In the [Coptic online dictionary](https://corpling.uis.georgetown.edu/coptic-dictionary/), search for a word; click on the ANNIS icon to find instances of that lemma in ANNIS
@@ -13,7 +14,7 @@ This tutorial will:
   * [show you how to download search/query results](#download)
   * [provide models for citing or linking to the data in your publications](#cite)
 
-<a name="corpus"></a>## ANNIS Corpus Browser
+## <a name="corpus"></a>ANNIS Corpus Browser
 When you arrive at [https://corpling.uis.georgetown.edu/annis/scriptorium](https://corpling.uis.georgetown.edu/annis/scriptorium), you will see the list of publicly available corpora on the lower left of your screen.  (On the right, you will see a list of sample queries for our corpora -- more on that in a minute.)
 <a name="docinfo"></a>Look at the list of corpora:
 1.  To find out more information about any corpus, click the "i" information button for that corpus.  A window will appear with:
@@ -28,7 +29,7 @@ When you arrive at [https://corpling.uis.georgetown.edu/annis/scriptorium](https
   **:arrow_right:Try it:  What happens when you type in "shenoute." (without the quotation marks) in the Filter box above the list of corpora?**
   **:arrow_right:What happens when you click the :arrows_counterclockwise: button ?**
 
-<a name="search"></a>## Basic Search
+## <a name="search"></a>Basic Search
 Let's start by using the example queries provided for any given corpus.
 
 **:arrow_right:Try it:  Click on the first corpus, apophthegmata.patrum.  Then play around with the sample queries or follow the following steps**
@@ -65,7 +66,7 @@ ANNIS uses a multi-layer annotation model, where a base text appears followed by
   
 **:arrow_right:Try it:  You can click on the History button to see all the previous queries you've run in your current ANNIS session.**
 
-<a name="complex"></a>## Complex Searches 
+## <a name="complex"></a>Complex Searches 
 
 You can also use [regular expressions](http://ryanstutorials.net/regular-expressions-tutorial/) and the Annis Query Language to create complex queries, searches for sequences of characters, queries for two or more annotations, etc.
 
@@ -110,7 +111,7 @@ There's lots of fun stuff you can do with regular expressions:
 *Know your corpus and annotations when doing research.  For example, in our corpus, a compound word containing both Greek and Coptic contains a language tag only for the Greek morph within the compound. (E.g., in ⲣⲭⲣⲉⲓⲁ, only ⲭⲣⲉⲓⲁ receives the Greek tag. Hence, we use syntax for finding overlapping search fields ("o") rather than equivalent fields ("="). `lang="Greek" _=_ pos="V"` ([link](https://corpling.uis.georgetown.edu/annis/?id=dc1b4bdf-6d0e-407e-9c27-80265da4f58a))
 finds all verbs that are Greek loanwords; `lang="Greek" _o_ pos="V"` ([link](https://corpling.uis.georgetown.edu/annis/?id=b40a6020-3be6-4f25-bb38-97d64ce6ac79)) finds all verbs that are Greek loanwords or are compound words with Greek loan words as part of the compound.  Compare the results in the links.* 
 
-## Word Frequencies
+## <a name="freq"></a>Word Frequencies
 ANNIS allows you to find word frequency lists for our corpora.
 
 **:arrow_right:Try it: Select the shenoute.eagerness corpus.**
@@ -145,7 +146,7 @@ You can also produce frequencies for more refined lists. **_Be sure to close the
 
 _Again:  know your corpus so you understand the numbers.  Spend some time looking at the metadata, understanding the annotation layers, and running queries to see how the annotations and textual data work._
 
-<a name="download"></a>## Download Your Results
+## <a name="download"></a>Download Your Results
 
 We encourage all researcher to keep records of their research in ANNIS.  This includes queries, the corpora on which the queries are run , the version number and version date of the corpora, and the results.
 
@@ -163,7 +164,7 @@ There are multiple ways you can download the results of your query by clicking M
   * If you want more annotations (such as part of speech tags) add them to the "annotation keys" box; be sure to use the correct name for the annotation
   * If you want more metadata (such as the names of editors or translators of each document), add them to the "Parameters" box; be sure to use the correct name for the metadata field
 
-<a name="cite"></a>## Cite and Link to Your Query
+## <a name="cite"></a>Cite and Link to Your Query
 
 
 
