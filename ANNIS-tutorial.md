@@ -3,7 +3,8 @@
 Coptic Scriptorium uses the [ANNIS](http://corpus-tools.org/annis/) search and visualization tool. You can access Coptic Scriptorium's corpora in ANNIS in multiple ways:
 * Go directly to [https://corpling.uis.georgetown.edu/annis/scriptorium](https://corpling.uis.georgetown.edu/annis/scriptorium) and run a query
 * In the [Coptic online dictionary](https://corpling.uis.georgetown.edu/coptic-dictionary/), search for a word; click on the ANNIS icon to find instances of that lemma in ANNIS
-* When browsing documents at [our portal for reading Coptic texts](http://data.copticscriptorium.org), click on the "Search ANNIS" button to search that corpus
+* When browsing documents at [our portal for reading Coptic texts](http://data.copticscriptorium.org), click on the "Search ANNIS" button to query that corpus.
+
 This tutorial will introduce you to the ways in which our corpora are annotated, how to search the corpora and annotations, and how to download and cite those queries.
 
 ## ANNIS Corpus Browser
@@ -55,9 +56,56 @@ ANNIS uses a multi-layer annotation model, where a base text appears followed by
   * Search for all words with the morpheme "ⲙⲛⲧ" in Shenoute's "Not Because a Fox Barks": click on [shenoute.fox and search for morph="ⲙⲛⲧ"](https://corpling.uis.georgetown.edu/annis/scriptorium#_q=bW9ycGg9IuKymeKym-KypyI&_c=c2hlbm91dGUuZm94&cl=5&cr=5&s=0&l=10&_seg=bm9ybV9ncm91cA)
   * Search for all proper names in Warren Wells' Sahidica edition of the Gospel of Mark: click on [sahidica.mark and search for pos="NPROP"](https://corpling.uis.georgetown.edu/annis/scriptorium#_q=cG9zPSJOUFJPUCI&_c=c2FoaWRpY2EubWFyaw&cl=5&cr=5&s=0&l=10&_seg=bm9ybV9ncm91cA)
   * Play around with some simple searches.
+  
+**:arrow_right:Try it:  You can click on the History button to see all the previous queries you've run in your current ANNIS session.**
 
-You can also use regular expressions or the Annis Query Language to create complex queries.
+## Complex Searches 
 
+You can also use [regular expressions](http://ryanstutorials.net/regular-expressions-tutorial/) and the Annis Query Language to create complex queries, searches for sequences of characters, queries for two or more annotations, etc.
+
+**:arrow_right:Try it: Select a corpus, like 1 Corinthians, and try the following queries.  (Type or cut-and-paste.) What kind of results do you get?**
+  * norm_group=/ⲡⲉⲧ.*/ 
+  * norm=/.*ⲟⲥ/ 
+  * norm=/ⲥ[ⲟⲱ]ⲧⲙ/ 
+
+Hint:  the .* in the query syntax signals that you want to search for any character(s).
+
+You can also search within a translation, if your corpus has a translation.  (Not all do.)
+
+**:arrow_right:Try it:  Select the 1 Corinthian corpus. Try the following queries.  What's the difference?**
+  ```
+  translation=/.*brother.*/
+  translation=/.*[Bb]rother.*/
+```
+
+You can search more than one field at the same time.  
+
+**:arrow_right:Try it: Say you're interested in proper names. Select the corpus for Abraham Our Father. Compare the following queries**
+  * pos="NPROP" _=_ lang="Greek"
+  * pos="NPROP" _=_ lang="Hebrew"
+  * pos="NPROP" _=_ lang=/.*/
+
+Note:  We tag loan words for language of origin based on the oldest possible language.  To find all loan words, use the lang=/.*/ query.  
+
+You can also add metadata to your queries.
+
+**:arrow_right:Try it: Select the Abraham Our Father corpus.  Search for all the appearances of "ϣⲉⲉⲣⲉ" in the codex MONB.YA:  norm="ϣⲉⲉⲣⲉ" & meta::msName="MONB.YA"**
+  * Play around with other metadata fields.  To find all words in documents edited by Rebecca S. Krawiec, select your corpora and search: 
+```  
+meta::annotation=/.*Krawiec.*/
+```
+
+There's lots of fun stuff you can do with regular expressions:
+  * Find either circumstantial converters or focalizing converters: pos=/CCIRC|CFOC/
+  * Find either form of the same verb: norm=/ⲥ[ⲟⲱ]ⲧⲙ/ 
+  * Query for things following each other: To search for a copular pron sentence (a copula following a pronoun):  pos="PPERI" . pos="COP" 
+  * Query for nearness:  To find "daughter" within 50 tokens after "son": norm="ϣⲏⲣⲉ" ^* norm="ϣⲉⲉⲣⲉ"
+
+*Know your corpus and annotations when doing research.  For example, in our corpus, a compound word containing both Greek and Coptic contains a language tag only for the Greek morph within the compound. (E.g., in ⲣⲭⲣⲉⲓⲁ, only ⲭⲣⲉⲓⲁ receives the Greek tag. Hence, we use syntax for finding overlapping search fields ("o") rather than equivalent fields ("="). lang="Greek" _o_ pos="V" finds all Greek verbs.*
 
   
-Note:  You can click on the History button to see all the previous queries you've run in your current ANNIS session.
+
+
+
+
+
