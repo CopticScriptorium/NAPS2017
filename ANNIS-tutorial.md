@@ -81,9 +81,9 @@ You can also search within a translation, if your corpus has a translation.  (No
 You can search more than one field at the same time.  
 
 **:arrow_right:Try it: Say you're interested in proper names. Select the corpus for Abraham Our Father. Compare the following queries**
-  * pos="NPROP" _=_ lang="Greek"
-  * pos="NPROP" _=_ lang="Hebrew"
-  * pos="NPROP" _=_ lang=/.*/
+  * `pos="NPROP" _o_ lang="Greek"`
+  * `pos="NPROP" _o_ lang="Hebrew"`
+  * `pos="NPROP" _o_ lang=/.*/`
 
 Note:  We tag loan words for language of origin based on the oldest possible language.  To find all loan words, use the lang=/.*/ query.  
 
@@ -101,12 +101,13 @@ There's lots of fun stuff you can do with regular expressions:
   * Query for things following each other: To search for a copular pron sentence (a copula following a pronoun):  pos="PPERI" . pos="COP" 
   * Query for nearness:  To find "daughter" within 50 tokens after "son": norm="ϣⲏⲣⲉ" ^* norm="ϣⲉⲉⲣⲉ"
 
-*Know your corpus and annotations when doing research.  For example, in our corpus, a compound word containing both Greek and Coptic contains a language tag only for the Greek morph within the compound. (E.g., in ⲣⲭⲣⲉⲓⲁ, only ⲭⲣⲉⲓⲁ receives the Greek tag. Hence, we use syntax for finding overlapping search fields ("o") rather than equivalent fields ("="). lang="Greek" _o_ pos="V" finds all Greek verbs.*
+*Know your corpus and annotations when doing research.  For example, in our corpus, a compound word containing both Greek and Coptic contains a language tag only for the Greek morph within the compound. (E.g., in ⲣⲭⲣⲉⲓⲁ, only ⲭⲣⲉⲓⲁ receives the Greek tag. Hence, we use syntax for finding overlapping search fields ("o") rather than equivalent fields ("="). `lang="Greek" _=_ pos="V"` ([link](https://corpling.uis.georgetown.edu/annis/?id=dc1b4bdf-6d0e-407e-9c27-80265da4f58a))
+finds all verbs that are Greek loanwords; `lang="Greek" _o_ pos="V"` ([link](https://corpling.uis.georgetown.edu/annis/?id=b40a6020-3be6-4f25-bb38-97d64ce6ac79)) finds all verbs that are Greek loanwords or are compound words with Greek loan words as part of the compound.  Compare the results in the links.* 
 
 ## Word Frequencies
 ANNIS allows you to find word frequency lists for our corpora.
 
-**:arrow_right:Try it: Select the shenoute.eagerness corpus. **
+**:arrow_right:Try it: Select the shenoute.eagerness corpus.**
   * type in the following query to find all the words in the corpus:  norm
   * Below the query window, you should see a button for "More."  Click on it and select "Frequency Analysis."  Click "Perform Frequency Analysis"
   * Both a chart and a list of word frequencies will appear.
@@ -116,25 +117,27 @@ ANNIS allows you to find word frequency lists for our corpora.
 
 You can also produce frequencies for more refined lists. **_Be sure to close the "Frequency Analysis" pane to clear your data before you start a new analysis._**
 
-**:arrow_right:Try it: Create lists for loan words in our corpus **
-  **Remember: If you have just run a frequency analysis, then close the current "Frequency Analysis" pane first.  Do this (or click "new analysis") between each new frequency analysis. **
-  1. Find the Greek loan words in the shenoute.eagerness corpus using this query: lang="Greek" _o_ norm
+**:arrow_right:Try it: Create lists for loan words in our corpus.**
+
+  **Remember: If you have just run a frequency analysis, then close the current "Frequency Analysis" pane first.  Do this (or click "new analysis") between each new frequency analysis.**
+  
+  1. Find the Greek loan words in the shenoute.eagerness corpus using this query: `lang="Greek" _o_ norm`
     * Enter the query.  (If you've closed the Frequency Analysis pane, click "More" then "Frequency Analysis")
     * Delete all rows EXCEPT "norm" (since you want the frequency of each normalized word)
-    * Click 
-  2. Can you do the same to find _all_ loan words in the shenoute.eagerness corpus (remember to hit "new analysis" first): lang=/.*/ _o_ norm
-  3. Can you do the same to find all loan words that are _verbs_ (remember to hit "new analysis" first): lang=/.*/ _o_ norm _o_ pos="V"
+    * Click "Perform Frequency Analysis"
+  2. Can you do the same to find _all_ loan words in the shenoute.eagerness corpus (remember to hit "new analysis" first): `lang=/.*/ _o_ norm`
+  3. Can you do the same to find all loan words that are _verbs_ (remember to hit "new analysis" first): `lang=/.*/ _o_ norm _o_ pos="V"`
   
 **BONUS question:  What do you do about corpora that contain more than one manuscript witness to the same text?**  I See Your Eagerness is one such corpus.  In some places, we have parallel manuscript witnesses to the same text.  So if you run a straight word frequency list, you'll get duplicate "hits".  For this corpus (and future versions of other corpora) we encode parallel witnesses in the metadata fields.  When you [click on the "i" information button](#docinfo) for a document, you'll see metadata fields for "witness" and "redundant".
 
-TODO: insert image
+  ![Image of metadata-witness](https://https://github.com/CopticScriptorium/NAPS2017/images/metadata-witness.png)
 
-**:arrow_right:Try it: Run a freqency analysis using the following query: lang=/.*/ _o_ norm _o_ pos="V" & meta::redundant="no" **
+**:arrow_right:Try it: Run a freqency analysis using the following query: `lang=/.*/ _o_ norm _o_ pos="V" & meta::redundant="no"`**
   * Remember to click "new analysis" to clear your old frequency data first!
   * Remember to delete rows for everything except norm when you run the analysis.
   * Are the results _different_ from the results from #3 above?
 
-_Again:  remember, know your corpus so you understand the numbers.  Spend some time looking at the metadata, understanding the annotation layers, and running queries to see how the annotations and textual data work._
+_Again:  know your corpus so you understand the numbers.  Spend some time looking at the metadata, understanding the annotation layers, and running queries to see how the annotations and textual data work._
 
 ## Download Your Results
 
