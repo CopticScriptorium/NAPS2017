@@ -17,6 +17,8 @@ As you are exploring, ask yourself:
   * What kind of research could I/would I do with this text corpus?
   * Can I tell how the text has been digitized?
 
+If you have time, check out an [aligned digital Hexapla](http://textalign.net/output/new-testament-hexapla.html) of digitized editions of the New Testament in six languages created by Joel Kalvesmaki as part of his [Text Alignment Network project](http://textalign.net/).
+
 ## Coptic SCRIPTORIUM Digital Editions
 
 Our project publishes digital editions of literary Coptic texts.
@@ -73,3 +75,8 @@ If you're creating your own digital corpus, Consider:
   * Do you need to annotate your text in any way?  In our corpus architecture, even spelling normalization is an annotation.  What annotations do you need?  Why and how?  
   * What kind of metadata do you need to provide?  
   * What kind of access will you allow others to have to your corpus?  (Consider a license for your corpus and data.)
+  
+If you're interested in aligning texts and translations, here are some tools:
+  * [Alpheios Text Alignment App](http://www.perseids.org/apps/alignment) (allows you to export XML files of your alignment; created in collaboration with Perseus)
+  * [Text Alignment Network](http://textalign.net/)
+  * [Ugarit text alignment](http://ugarit.ialigner.com/)
