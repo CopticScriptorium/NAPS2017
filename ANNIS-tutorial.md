@@ -16,6 +16,11 @@ This tutorial will:
 
 ## <a name="corpus"></a>ANNIS Corpus Browser
 When you arrive at [https://corpling.uis.georgetown.edu/annis/scriptorium](https://corpling.uis.georgetown.edu/annis/scriptorium), you will see the list of publicly available corpora on the lower left of your screen.  (On the right, you will see a list of sample queries for our corpora -- more on that in a minute.)
+
+Each _corpus_ contains multiple _documents_.  
+  * Each corpus has its own  _metadata_ (information about the corpus, such as all the editors/annotators who worked on the corpus, license information, the date this version of the corpus was released, etc.)
+  * Each document within the corpus also has its own  _metadata_ (tite of the document, manuscript information if the text is from a manuscript, specific editors/annotators for that document, translators, the date this version of the document was released, etc.)
+
 <a name="docinfo"></a>Look at the list of corpora:
 1.  To find out more information about any corpus, click the "i" information button for that corpus.  A window will appear with:
   * a dropdown menu at the top listing all the documents in a corpus
@@ -24,9 +29,15 @@ When you arrive at [https://corpling.uis.georgetown.edu/annis/scriptorium](https
 2.  To see a list of documents in any corpus, click the document icon :page_facing_up: for that corpus name
   * Click the "i" information button for any document for more information
   * You'll also see a list of visualizations for each document (the same visualizations available at [http://data.copticscriptorium.org](http://data.copticscriptorium.org)
+  
   **:arrow_right:Try it:  What happens when you click on a link for a visualization?**
+  
+  ![corpus document list](https://github.com/CopticScriptorium/NAPS2017/raw/master/images/corpus-document-list.png)
+  
 3. You can filter the list of corpora also:
+  
   **:arrow_right:Try it:  What happens when you type in "shenoute." (without the quotation marks) in the Filter box above the list of corpora?**
+  
   **:arrow_right:What happens when you click the :arrows_counterclockwise: button ?**
 
 ## <a name="search"></a>Basic Search
@@ -59,9 +70,9 @@ ANNIS uses a multi-layer annotation model, where a base text appears followed by
 **:arrow_right:Try it:  Create simple queries for information other than words.**
   * Search for norm="ⲥⲟⲛ" in your chosen corpora
   * Now search for lemma="ⲥⲟⲛ".  What's the difference in the results?
-  * Search for all Greek words in Shenoute's "I See Your Eagerness":  click on [shenoute.eagerness corpus and search for lang="Greek"](https://corpling.uis.georgetown.edu/annis/scriptorium#_q=bGFuZz0iR3JlZWsi&_c=c2hlbm91dGUuZWFnZXJuZXNz&cl=5&cr=5&s=0&l=10&_seg=bm9ybV9ncm91cA)
-  * Search for all words with the morpheme "ⲙⲛⲧ" in Shenoute's "Not Because a Fox Barks": click on [shenoute.fox and search for morph="ⲙⲛⲧ"](https://corpling.uis.georgetown.edu/annis/scriptorium#_q=bW9ycGg9IuKymeKym-KypyI&_c=c2hlbm91dGUuZm94&cl=5&cr=5&s=0&l=10&_seg=bm9ybV9ncm91cA)
-  * Search for all proper names in Warren Wells' Sahidica edition of the Gospel of Mark: click on [sahidica.mark and search for pos="NPROP"](https://corpling.uis.georgetown.edu/annis/scriptorium#_q=cG9zPSJOUFJPUCI&_c=c2FoaWRpY2EubWFyaw&cl=5&cr=5&s=0&l=10&_seg=bm9ybV9ncm91cA)
+  * Search for all Greek words in Shenoute's "I See Your Eagerness":  click on tge shenoute.eagerness corpus and search for lang="Greek"([link](https://corpling.uis.georgetown.edu/annis/scriptorium#_q=bGFuZz0iR3JlZWsi&_c=c2hlbm91dGUuZWFnZXJuZXNz&cl=5&cr=5&s=0&l=10&_seg=bm9ybV9ncm91cA))
+  * Search for all words with the morpheme "ⲙⲛⲧ" in Shenoute's "Not Because a Fox Barks": click on the shenoute.fox corpus and search for morph="ⲙⲛⲧ" ([link](https://corpling.uis.georgetown.edu/annis/scriptorium#_q=bW9ycGg9IuKymeKym-KypyI&_c=c2hlbm91dGUuZm94&cl=5&cr=5&s=0&l=10&_seg=bm9ybV9ncm91cA))
+  * Search for all proper names in Warren Wells' Sahidica edition of the Gospel of Mark: click on the sahidica.mark corpus and search for pos="NPROP"([link](https://corpling.uis.georgetown.edu/annis/scriptorium#_q=cG9zPSJOUFJPUCI&_c=c2FoaWRpY2EubWFyaw&cl=5&cr=5&s=0&l=10&_seg=bm9ybV9ncm91cA))
   * Play around with some simple searches.
   
 **:arrow_right:Try it:  You can click on the History button to see all the previous queries you've run in your current ANNIS session.**
@@ -102,7 +113,7 @@ You can also add metadata to your queries.
 norm & meta::annotation=/.*Krawiec.*/
 ```
 
-There's lots of fun stuff you can do with regular expressions:
+There's lots of fun stuff you can do with regular expressions and the ANNIS Query Language:
   * Find either circumstantial converters or focalizing converters: pos=/CCIRC|CFOC/
   * Find either form of the same verb: norm=/ⲥ[ⲟⲱ]ⲧⲙ/ 
   * Query for things following each other: To search for a copular pron sentence (a copula following a pronoun):  pos="PPERI" . pos="COP" 
@@ -152,7 +163,7 @@ We encourage all researcher to keep records of their research in ANNIS.  This in
 
 There are multiple ways you can download the results of your query by clicking More > Export underneath the query panel.  Each way or format works well for a different discipline or research objective.  For most people who work with texts as philologists, historians, or religious studies scholars, we recommend using the GridExporter.  The GridExporter allows you to tell ANNIS which annotations and which metadata you want to export.
 
-**:arrow_right:Try it: Run a query ([such as this one](https://corpling.uis.georgetown.edu/annis/?id=ad9787db-c777-465f-8c39-a8f1b661ebca) and download your results.**
+**:arrow_right:Try it: Run a query ([such as this one](https://corpling.uis.georgetown.edu/annis/?id=ad9787db-c777-465f-8c39-a8f1b661ebca)) and download your results.**
   * Run the query
   * Click "More" > "Export"
   * In the Exporter dropdown menu select GridExporter
@@ -165,6 +176,10 @@ There are multiple ways you can download the results of your query by clicking M
   * If you want more metadata (such as the names of editors or translators of each document), add them to the "Parameters" box; be sure to use the correct name for the metadata field
 
 ## <a name="cite"></a>Cite and Link to Your Query
+
+When researching our corpora for a future publication, please note the date and version number of the documents or corpora while you are conducting your research.  (This information is in the corpus and document metadata accessed via the information button(s) for each corpus and each document within a corpus.)  We update our corpora regularly and recommend all citations include the version number and date of the resources used, as described below. (If you conducted research in the past and did not note the version and date of the corpus at that time, then please cite the date you accessed the corpus.)
+
+We have [Citation Guidelines](http://copticscriptorium.org/citation-guidelines.html) with examples for how to cite the project, the project site, individual corpora, and individual documents in your bibliography and footnotes.
 
 
 
