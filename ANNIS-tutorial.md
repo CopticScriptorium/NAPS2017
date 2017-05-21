@@ -155,7 +155,7 @@ You can also produce frequencies for more refined lists. **_Be sure to close the
   * Remember to delete rows for everything except norm when you run the analysis.
   * Are the results _different_ from the results from #3 above?
 
-_Again:  know your corpus so you understand the numbers.  Spend some time looking at the metadata, understanding the annotation layers, and running queries to see how the annotations and textual data work._
+_Again:  know your corpus so you understand the numbers.  Spend some time looking at the metadata, understanding the annotation layers, and running queries to see how the annotations and textual data work.  In our corpora, we designate as redundant the withness(es) with the most damage or lacunae._
 
 ## <a name="download"></a>Download Your Results
 
@@ -175,13 +175,30 @@ There are multiple ways you can download the results of your query by clicking M
   * If you want more annotations (such as part of speech tags) add them to the "annotation keys" box; be sure to use the correct name for the annotation
   * If you want more metadata (such as the names of editors or translators of each document), add them to the "Parameters" box; be sure to use the correct name for the metadata field
 
-## <a name="cite"></a>Cite and Link to Your Query
+## <a name="cite"></a>Citing and Linking to Your Data
 
 When researching our corpora for a future publication, please note the date and version number of the documents or corpora while you are conducting your research.  (This information is in the corpus and document metadata accessed via the information button(s) for each corpus and each document within a corpus.)  We update our corpora regularly and recommend all citations include the version number and date of the resources used, as described below. (If you conducted research in the past and did not note the version and date of the corpus at that time, then please cite the date you accessed the corpus.)
 
-We have [Citation Guidelines](http://copticscriptorium.org/citation-guidelines.html) with examples for how to cite the project, the project site, individual corpora, and individual documents in your bibliography and footnotes.
+We have [Citation Guidelines](http://copticscriptorium.org/citation-guidelines.html) with examples for how to cite the project, the project site, individual corpora, and individual documents in your bibliography and footnotes.  If you are using documents or queries on only one corpus, then you may cite only that corpus. 
 
+When citing more than one corpus, we recommend citing the corpora and versions of each corpus used.
 
+You can save a link to a query or even to a query result.
 
+![screenshot of linking to query](https://github.com/CopticScriptorium/NAPS2017/raw/master/images/link-to-query.png)
 
+If you want to embed a result in a blog, webpage, or other electronic publication, you can do that too!
+
+![screenshot of embed dialogue](https://github.com/CopticScriptorium/NAPS2017/raw/master/images/embed-viz.png)
+
+Some DH researchers recommend providing access to your data when you publish your analysis.  You can do this in a number of ways:
+  1. Link to our project's raw data on our [GitHub corpus repository](https://github.com/CopticScriptorium/corpora). 
+    * Link to the version that corresponds to your data.  See our [release page](https://github.com/CopticScriptorium/corpora/releases).
+    ![screenshot of GitHub corpora repository page](https://github.com/CopticScriptorium/NAPS2017/raw/master/images/github-release-page.png)
+    * So, for research conducted in May 2017, link to the [April 2017 version](https://github.com/CopticScriptorium/corpora/releases/tag/v2.3.1).  For research that was conducted in January 2017, you would want to link to the [December 2016 version](https://github.com/CopticScriptorium/corpora/releases/tag/v2.2)
+  2.  Download your query results using the [process described above](#download) and post them on your own site; link to them in your publication.
+  3.  Link to your query on our ANNIS site.
+
+_Important note:  the URLs for the query and result links are stable, but the core text data may change if we update the corpus or documents you are querying.  We update regularly to add more documents to a corpus, to add new annotations, or to make corrections.  **We encourage all researchers to download query results and cite the version number(s)and date(s) of the data used.**_
+    
 
