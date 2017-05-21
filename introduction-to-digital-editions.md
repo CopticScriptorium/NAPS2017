@@ -1,6 +1,6 @@
 # What are Digital Editions and Digitized Corpora?
 
-What are digital editions and digitized text corpora?  This is a fundamental question for people who want to use them in research and people who want to create them for use in research. 
+What are digital editions and digitized text corpora?  This tutorial will generate a discussion about the research purposes of digitized corpora and the how those research methods guide the structure and formation of different corpora.  
 
 ## Explore two digital corpora commonly used by scholars of antiquity and late antiquity
 
@@ -49,3 +49,7 @@ The following buttons will take you to those data files:
 ![screenshot of buttons](https://github.com/CopticScriptorium/NAPS2017/raw/master/images/buttons.png)
 
 Perseus and Papyri.info also use TEI XML encoding for their digital editions.
+
+Coptic Scriptorium is a multi-disciplinary project; we also release our corpora in PAULA XML files, since the PAULA format is used for linguistic research.
+
+If you're creating your own digital corpus, Consider: what kinds of things do you want to digitize and why?  Do you need to annotate your text in any way?  Why and how?  
