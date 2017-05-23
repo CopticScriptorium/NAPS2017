@@ -5,7 +5,10 @@ What are digital editions and digitized text corpora?  This tutorial will genera
 ## Explore two digital corpora commonly used by scholars of antiquity and late antiquity
 
 Spend 5 minutes exploring one of the following two digital corpora:
-  * [Perseus Digital Library Greek and Roman Collection](http://www.perseus.tufts.edu/hopper/collection?collection=Perseus:collection:Greco-Roman) (scroll down to Augustine or Basil for some early Christian texts)
+  * [Perseus Digital Library Greek and Roman Collection](http://www.perseus.tufts.edu/hopper/collection?collection=Perseus:collection:Greco-Roman) 
+    * Scroll down to Basil for some early Christian texts and click on his Epistles
+    * Run a search in the box on the right
+    * Click on a word -- what happens?
   * [Papyri.info text navigator](http://papyri.info/search)
     * Try filtering using the metadata fields
     * Try changing your font to Coptic and typing in a Coptic word in the search box
@@ -80,3 +83,7 @@ If you're interested in aligning texts and translations, here are some tools:
   * [Alpheios Text Alignment App](http://www.perseids.org/apps/alignment) (allows you to export XML files of your alignment; created in collaboration with Perseus)
   * [Text Alignment Network](http://textalign.net/)
   * [Ugarit text alignment](http://ugarit.ialigner.com/)
+
+If you're interested in Coptic New Testament and Old Testament editions, check out these projects in Germany:
+  * [New Testament Virtual Manuscript Room](http://ntvmr.uni-muenster.de/) which includes Coptic
+  * [Coptic Old Testament Project](http://coptot.manuscriptroom.com/)
