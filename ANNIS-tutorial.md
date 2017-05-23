@@ -25,7 +25,7 @@ Each _corpus_ contains multiple _documents_.
 1.  To find out more information about any corpus, click the "i" information button for that corpus.  A window will appear with:
   * a dropdown menu at the top listing all the documents in a corpus
   * on the left, _metadata_ (information about the corpus, such as annotators, translators, the date this version of the corpus was released)
-  * on the right, all the annotations available for texts in this corpus; for a description of what these annotations are, visit our [Annotation Layer Names documentation page](http://wiki.copticscriptorium.org/doku.php?id=annotation_layer_names); if you're in person at the NAPS workshop, we'll also give you a handout.
+  * on the right, all the annotations available for texts in this corpus.  These annotations will make more sense to you after you run a few searches.  (We also have documentation on our [wiki](http://wiki.copticscriptorium.org/doku.php?id=annotation_layer_names) if you're really interested.)
 2.  To see a list of documents in any corpus, click the document icon :page_facing_up: for that corpus name
   * Click the "i" information button for any document for more information
   * You'll also see a list of visualizations for each document (the same visualizations available at [http://data.copticscriptorium.org](http://data.copticscriptorium.org))
