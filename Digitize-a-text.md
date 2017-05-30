@@ -45,22 +45,8 @@ When you open an angle bracket, GitDox suggests tags that are currently availabl
 If you need to provide other information, such as if a letter in the manuscript is large or ekthetic (hangs out in the margin), see the cheatsheet provided in the workshop or our longer [Transcription Guidelines](https://github.com/CopticScriptorium/tagger-part-of-speech/blob/master/scriptorium-transcription-guidelines.pdf) for instructions.
 
 Below, see a sample text encoded as an example:
-```
-<TEI>
-<pb xml:id="YB307"><cb><note note="large embellishment in margin before the first letter of the page andpage number ⲧⲍ visible in upper right corner of page"><hi rend="ekthetic">Ⲉ</hi></note>ⲧⲃⲉⲡⲁⲓ̈ⲙ̣ⲛ̣
-ⲟⲩⲥⲓⲁϭⲉⲛⲁ
-ϣⲱϫ︤ⲛ︥ϩⲁⲛ̣<hi rend="small">ⲉ</hi>ϥ
-ⲛⲟⲃⲉϫⲉⲛ̄ⲛ̣ⲉϥ
-ⲙ̣ⲉⲧⲁⲛⲟⲉⲓ
-ⲁ̣ϣ̣ⲧⲉⲧⲙⲉⲧⲁ</cb>
-<cb>ⲛⲟⲓⲁⲛ̄ⲥⲁⲧⲣⲉⲛ
-ⲥⲁϩⲱⲛⲉⲃⲟⲗ
-ⲛ̄ⲕⲣⲟϥⲛⲓⲙϩⲓ
-ⲙⲛ︦ⲧ︥ⲁⲧⲥⲱⲧ︤ⲙ︥
-ⲛⲓⲙⲧⲛⲟⲩⲛⲉ
-ⲛϩⲱⲃⲛⲓⲙⲉϥ</cb></pb>
-</TEI>
-```
+
+![screenshot of sample text](https://github.com/CopticScriptorium/NAPS2017/raw/master/images/sample-text.png)
 
 Either while you are typing or after you are done transcribing, separate Coptic bound groups with a space or underscore.  For example:
 
